@@ -24,6 +24,7 @@
 		F8B8BD14194CCBA900E2B5C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8B8BD12194CCBA900E2B5C2 /* InfoPlist.strings */; };
 		F8B8BD16194CCBA900E2B5C2 /* KivaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD15194CCBA900E2B5C2 /* KivaTests.m */; };
 		F8B8BD20194CCC7000E2B5C2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B8BD1F194CCC7000E2B5C2 /* Storyboard.storyboard */; };
+		F8B8BD23194CEFEF00E2B5C2 /* KIVALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD22194CEFEF00E2B5C2 /* KIVALoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		F8B8BD13194CCBA900E2B5C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8B8BD15194CCBA900E2B5C2 /* KivaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KivaTests.m; sourceTree = "<group>"; };
 		F8B8BD1F194CCC7000E2B5C2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F8B8BD21194CEFEF00E2B5C2 /* KIVALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVALoginViewController.h; path = Kiva/KIVALoginViewController.h; sourceTree = "<group>"; };
+		F8B8BD22194CEFEF00E2B5C2 /* KIVALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVALoginViewController.m; path = Kiva/KIVALoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,9 @@
 		F8B8BCDE194CCBA900E2B5C2 = {
 			isa = PBXGroup;
 			children = (
+				F8B8BD21194CEFEF00E2B5C2 /* KIVALoginViewController.h */,
+				F8B8BD22194CEFEF00E2B5C2 /* KIVALoginViewController.m */,
+				F8B8BD24194CF8CB00E2B5C2 /* Models */,
 				F8B8BCF2194CCBA900E2B5C2 /* Kiva */,
 				F8B8BD0F194CCBA900E2B5C2 /* KivaTests */,
 				F8B8BCE9194CCBA900E2B5C2 /* Frameworks */,
@@ -160,6 +166,13 @@
 				F8B8BD12194CCBA900E2B5C2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B8BD24194CF8CB00E2B5C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +310,7 @@
 				F8B8BCF9194CCBA900E2B5C2 /* main.m in Sources */,
 				F8B8BCFD194CCBA900E2B5C2 /* KIVAAppDelegate.m in Sources */,
 				F8B8BD00194CCBA900E2B5C2 /* Kiva.xcdatamodeld in Sources */,
+				F8B8BD23194CEFEF00E2B5C2 /* KIVALoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,11 @@
 		F8B8BD16194CCBA900E2B5C2 /* KivaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD15194CCBA900E2B5C2 /* KivaTests.m */; };
 		F8B8BD20194CCC7000E2B5C2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B8BD1F194CCC7000E2B5C2 /* Storyboard.storyboard */; };
 		F8B8BD23194CEFEF00E2B5C2 /* KIVALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD22194CEFEF00E2B5C2 /* KIVALoginViewController.m */; };
+		F8B8BD29194CFE3600E2B5C2 /* KIVABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD28194CFE3600E2B5C2 /* KIVABaseModel.m */; };
+		F8B8BD2C194CFECB00E2B5C2 /* KIVALoan.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD2B194CFECB00E2B5C2 /* KIVALoan.m */; };
+		F8B8BD2F194D0AFF00E2B5C2 /* KIVADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD2E194D0AFF00E2B5C2 /* KIVADataManager.m */; };
+		F8B8BD31194D108E00E2B5C2 /* Loan.json in Resources */ = {isa = PBXBuildFile; fileRef = F8B8BD30194D108E00E2B5C2 /* Loan.json */; };
+		F8B8BD35194D111500E2B5C2 /* KIVAJSONImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD34194D111500E2B5C2 /* KIVAJSONImporter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,15 @@
 		F8B8BD1F194CCC7000E2B5C2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		F8B8BD21194CEFEF00E2B5C2 /* KIVALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVALoginViewController.h; path = Kiva/KIVALoginViewController.h; sourceTree = "<group>"; };
 		F8B8BD22194CEFEF00E2B5C2 /* KIVALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVALoginViewController.m; path = Kiva/KIVALoginViewController.m; sourceTree = "<group>"; };
+		F8B8BD27194CFE3600E2B5C2 /* KIVABaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVABaseModel.h; path = Kiva/KIVABaseModel.h; sourceTree = "<group>"; };
+		F8B8BD28194CFE3600E2B5C2 /* KIVABaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVABaseModel.m; path = Kiva/KIVABaseModel.m; sourceTree = "<group>"; };
+		F8B8BD2A194CFECB00E2B5C2 /* KIVALoan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVALoan.h; path = Kiva/KIVALoan.h; sourceTree = "<group>"; };
+		F8B8BD2B194CFECB00E2B5C2 /* KIVALoan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVALoan.m; path = Kiva/KIVALoan.m; sourceTree = "<group>"; };
+		F8B8BD2D194D0AFF00E2B5C2 /* KIVADataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVADataManager.h; path = Kiva/KIVADataManager.h; sourceTree = "<group>"; };
+		F8B8BD2E194D0AFF00E2B5C2 /* KIVADataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVADataManager.m; path = Kiva/KIVADataManager.m; sourceTree = "<group>"; };
+		F8B8BD30194D108E00E2B5C2 /* Loan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loan.json; sourceTree = "<group>"; };
+		F8B8BD33194D111500E2B5C2 /* KIVAJSONImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAJSONImporter.h; path = Kiva/KIVAJSONImporter.h; sourceTree = "<group>"; };
+		F8B8BD34194D111500E2B5C2 /* KIVAJSONImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAJSONImporter.m; path = Kiva/KIVAJSONImporter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +143,7 @@
 		F8B8BCF2194CCBA900E2B5C2 /* Kiva */ = {
 			isa = PBXGroup;
 			children = (
+				F8B8BD30194D108E00E2B5C2 /* Loan.json */,
 				F8B8BCFB194CCBA900E2B5C2 /* KIVAAppDelegate.h */,
 				F8B8BCFC194CCBA900E2B5C2 /* KIVAAppDelegate.m */,
 				F8B8BD01194CCBA900E2B5C2 /* Images.xcassets */,
@@ -171,8 +186,40 @@
 		F8B8BD24194CF8CB00E2B5C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8B8BD32194D10F200E2B5C2 /* Importers */,
+				F8B8BD26194CFD9E00E2B5C2 /* Core Data */,
+				F8B8BD25194CFD9A00E2B5C2 /* Mantle */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F8B8BD25194CFD9A00E2B5C2 /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8BD27194CFE3600E2B5C2 /* KIVABaseModel.h */,
+				F8B8BD28194CFE3600E2B5C2 /* KIVABaseModel.m */,
+				F8B8BD2A194CFECB00E2B5C2 /* KIVALoan.h */,
+				F8B8BD2B194CFECB00E2B5C2 /* KIVALoan.m */,
+				F8B8BD2D194D0AFF00E2B5C2 /* KIVADataManager.h */,
+				F8B8BD2E194D0AFF00E2B5C2 /* KIVADataManager.m */,
+			);
+			name = Mantle;
+			sourceTree = "<group>";
+		};
+		F8B8BD26194CFD9E00E2B5C2 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		F8B8BD32194D10F200E2B5C2 /* Importers */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8BD33194D111500E2B5C2 /* KIVAJSONImporter.h */,
+				F8B8BD34194D111500E2B5C2 /* KIVAJSONImporter.m */,
+			);
+			name = Importers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +303,7 @@
 				F8B8BCF7194CCBA900E2B5C2 /* InfoPlist.strings in Resources */,
 				F8B8BD02194CCBA900E2B5C2 /* Images.xcassets in Resources */,
 				F8B8BD20194CCC7000E2B5C2 /* Storyboard.storyboard in Resources */,
+				F8B8BD31194D108E00E2B5C2 /* Loan.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B8BCF9194CCBA900E2B5C2 /* main.m in Sources */,
+				F8B8BD29194CFE3600E2B5C2 /* KIVABaseModel.m in Sources */,
+				F8B8BD2C194CFECB00E2B5C2 /* KIVALoan.m in Sources */,
 				F8B8BCFD194CCBA900E2B5C2 /* KIVAAppDelegate.m in Sources */,
+				F8B8BD35194D111500E2B5C2 /* KIVAJSONImporter.m in Sources */,
+				F8B8BD2F194D0AFF00E2B5C2 /* KIVADataManager.m in Sources */,
 				F8B8BD00194CCBA900E2B5C2 /* Kiva.xcdatamodeld in Sources */,
 				F8B8BD23194CEFEF00E2B5C2 /* KIVALoginViewController.m in Sources */,
 			);

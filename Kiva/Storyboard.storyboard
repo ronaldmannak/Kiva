@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="mVk-1X-amB">
             <objects>
-                <viewController id="Elm-dp-fSB" sceneMemberID="viewController">
+                <viewController id="Elm-dp-fSB" customClass="KIVALoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mi5-Yc-SL3"/>
                         <viewControllerLayoutGuide type="bottom" id="XEj-gf-S5W"/>

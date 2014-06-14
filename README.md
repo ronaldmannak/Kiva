@@ -5,6 +5,6 @@ HackSummit Hackathon June 14, 2014
 
 
 Related repositories: 
-[Brian Spiering's KIVA+US data collection]("https://github.com/brianspiering/hacksummit")
+[Brian Spiering's KIVA+US data collection](/brianspiering/hacksummit)
 
-[Alex Fuhr's KIVA+US API]("https://github.com/afuhrtrumpet/hacksummit")
+[Alex Fuhr's KIVA+US API](/afuhrtrumpet/hacksummit)

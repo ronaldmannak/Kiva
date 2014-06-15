@@ -117,7 +117,7 @@
             NSLog(@"Error: %@", error);
         } else {
             [loanArray addObject:loan];
-            NSLog(@"Success: %@", loan);
+//            NSLog(@"Success: %@", loan);
         }
     }
     return [loanArray copy];

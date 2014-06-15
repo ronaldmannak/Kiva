@@ -53,6 +53,7 @@
             NSLog(@"loans: %@", loans);
             if (!loans) {
                 // If server is down, use stored items from disk
+                NSLog(@"Cannot load from server. Fall back to disk");
                 [KIVALoan importLoansFromDisk];
             }
         }];

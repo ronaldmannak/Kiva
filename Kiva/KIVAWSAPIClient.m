@@ -83,7 +83,7 @@ NSString *const kKivaWSAPIBaseURLString = @"http://ec2-54-187-253-179.us-west-2.
        }];
 }
 
-- (void)allLoans:(void (^)(NSDictionary *loans))success
+- (void)allLoans:(void (^)(NSArray *loans))success
 {
     if (!self.oAuthToken) {
         self.oAuthToken = @"WouldYouMindMeSendingAFakeOAuthToken?";
@@ -92,8 +92,8 @@ NSString *const kKivaWSAPIBaseURLString = @"http://ec2-54-187-253-179.us-west-2.
     [self POST:@"all_loans/"
     parameters:@{@"token": self.oAuthToken}
        success:^(NSURLSessionDataTask *task, id responseObject) {
-           NSLog(@"response: %@", responseObject);
-           if (success) { success(success); }
+//           NSLog(@"response: %@", responseObject);
+           if (success) { success(responseObject); }
        } failure:^(NSURLSessionDataTask *task, NSError *error) {
            NSLog(@"Fail: %@", error);
            if (success) { success(nil); }

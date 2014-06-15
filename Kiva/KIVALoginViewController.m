@@ -44,9 +44,9 @@
 - (IBAction)kivaLogin:(UIButton *)sender
 {
     // temp
-    [KIVALoan importLoansFromDisk];
-    [self performSegueWithIdentifier:@"MainSegueID" sender:sender];
-    return;
+//    [KIVALoan importLoansFromDisk];
+//    [self performSegueWithIdentifier:@"MainSegueID" sender:sender];
+//    return;
     
 //    sender.enabled = NO;
     [self.activityIndicator startAnimating];
@@ -58,8 +58,9 @@
                 // If server is down, use stored items from disk
                 NSLog(@"Cannot load from server. Fall back to disk");
                 [KIVALoan importLoansFromDisk];
-                [self.activityIndicator stopAnimating];
             }
+            [self.activityIndicator stopAnimating];
+            [self performSegueWithIdentifier:@"MainSegueID" sender:sender];
         }];
     }];
 }

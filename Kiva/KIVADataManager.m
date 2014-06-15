@@ -42,8 +42,32 @@
 
 - (void)allLoanSuccess:(void (^)(NSArray *loans))success
 {
-    [[KIVAWSAPIClient sharedClient] allLoans:^(NSDictionary *loans) {
-        NSLog(@"loans: %@", loans);
+    [[KIVAWSAPIClient sharedClient] allLoans:^(NSArray *loans) {
+
+        NSMutableArray *allLoans = [NSMutableArray new];
+        for (NSDictionary *JSONDict in loans) {
+            NSMutableArray *namedLoans = [NSMutableArray new];
+            for (NSDictionary *JSONLoan in JSONDict[@"loans"]) {
+                
+                NSError *error = nil;
+                KIVALoan *loan = [MTLJSONAdapter modelOfClass:KIVALoan.class
+                                           fromJSONDictionary:JSONLoan
+                                                        error:&error];
+                if (error) {
+                    NSLog(@"Error: %@", error);
+                } else {
+                    [namedLoans addObject:loan];
+                    [allLoans addObject:loan];
+                }
+            }
+            NSString *name = ((NSArray *)JSONDict[@"name"]).firstObject;            
+            if ([name isEqualToString:@"geography"]) {
+                self.geographyLoans = namedLoans.copy;
+            } else if ([name isEqualToString:@"expiring"]) {
+                self.expiringLoans = namedLoans.copy;
+            }
+        }
+        self.allLoans = allLoans.copy;
     }];
 }
 

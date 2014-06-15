@@ -17,6 +17,6 @@
 - (void)loansOfType:(NSString *)typeString
             success:(void (^)(NSArray *loans))success;
 
-- (void)allLoans:(void (^)(NSDictionary *loans))success;
+- (void)allLoans:(void (^)(NSArray *loans))success;
 
 @end

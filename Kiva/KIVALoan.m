@@ -57,7 +57,17 @@
     return [modifiedDictionaryValue copy];
 }
 
-+ (NSValueTransformer *)imageURLJSONTransformer
++ (NSValueTransformer *)largeImageURLJSONTransformer
+{
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)smallImageURLJSONTransformer
+{
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)flagURLJSONTransformer
 {
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }

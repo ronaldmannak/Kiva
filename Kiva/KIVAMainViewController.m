@@ -8,6 +8,7 @@
 
 #import "KIVAMainViewController.h"
 #import "KIVACarrouselViewController.h"
+#import "KIVADataManager.h"
 
 @interface KIVAMainViewController ()
 
@@ -26,7 +27,9 @@
     NSAssert(self.expiringCarrousel, @"no expiring carrousel");
     
     self.expiringCarrousel.carrouselTitle = @"Expiring";
+    self.expiringCarrousel.loans = [KIVADataManager sharedManager].expiringLoans;
     self.geographyCarrousel.carrouselTitle = @"Geography";
+    self.geographyCarrousel.loans = [KIVADataManager sharedManager].geographyLoans;
 }
 
 - (void)didReceiveMemoryWarning

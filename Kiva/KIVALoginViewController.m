@@ -44,9 +44,9 @@
 - (IBAction)kivaLogin:(UIButton *)sender
 {
     // temp
-    [KIVALoan importLoansFromDisk];
-    [self performSegueWithIdentifier:@"MainSegueID" sender:sender];
-    return;
+//    [KIVALoan importLoansFromDisk];
+//    [self performSegueWithIdentifier:@"MainSegueID" sender:sender];
+//    return;
     
 //    sender.enabled = NO;
     [self.activityIndicator startAnimating];

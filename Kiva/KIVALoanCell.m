@@ -33,7 +33,7 @@
                               placeholderImage:[[UIImage alloc] init]];
 
     self.nameLabel.text =               loan.name;
-    self.countryLabel.text =            loan.country;
+    self.countryLabel.text =            loan.country.uppercaseString;
     self.amountNeededLabel.text =       [NSString stringWithFormat:@"$%f", loan.loanAmount];
     self.percentageCompleteLabel.text = [NSString stringWithFormat:@"%f%%", loan.fundedPercentage];
     self.sectorLabel.text =             loan.sector;

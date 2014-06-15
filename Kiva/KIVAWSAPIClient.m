@@ -143,7 +143,7 @@ NSString *const kKivaWSAPIBaseURLString = @"http://ec2-54-187-253-179.us-west-2.
                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
     NSParameterAssert(success);
-    [self GET:@"auth/kiva_request/" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self POST:@"auth/kiva_request/" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSString *oAuthToken    = responseObject[@"oauth_token"];
         NSString *oAuthSecret   = responseObject[@"oauth_token_secret"];
         if (success) {

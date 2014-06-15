@@ -8,6 +8,8 @@
 
 #import "KIVACarrouselViewController.h"
 #import "KIVALoanCell.h"
+#import "KIVALoan.h"
+#import "KIVAWebViewController.h"
 
 @interface KIVACarrouselViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -23,6 +25,7 @@
     [super viewDidLoad];
     self.label.text = self.carrouselTitle;
     [self.collectionView reloadData];
+    self.collectionView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setCarrouselTitle:(NSString *)carrouselTitle
@@ -36,7 +39,7 @@
     [self.collectionView reloadData];
 }
 
-#pragma mark - UICollectionViewDelegate
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -50,6 +53,18 @@
     
     cell.loan = self.loans[indexPath.row];    
     return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    KIVALoan *loan = self.loans[indexPath.row];
+    NSString *path = [@"http://www.kiva.org/lend/" stringByAppendingPathComponent:@(loan.loanID).stringValue];
+    KIVAWebViewController *webVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewControllerID"];
+    [self presentViewController:webVC animated:YES
+                     completion:NULL];
+    webVC.url = [NSURL URLWithString:path];
 }
 
 @end

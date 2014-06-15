@@ -38,6 +38,7 @@
 		F8B8BD4A194DFFB600E2B5C2 /* KIVACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD49194DFFB600E2B5C2 /* KIVACoreDataManager.m */; };
 		F8B8BD4D194E2D4500E2B5C2 /* KIVACarrouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */; };
 		F8B8BD50194E3EC300E2B5C2 /* KIVAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD4F194E3EC300E2B5C2 /* KIVAMainViewController.m */; };
+		F8B8BD53194E4C2600E2B5C2 /* KIVAWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD52194E4C2600E2B5C2 /* KIVAWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVACarrouselViewController.m; path = Kiva/KIVACarrouselViewController.m; sourceTree = "<group>"; };
 		F8B8BD4E194E3EC300E2B5C2 /* KIVAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAMainViewController.h; path = Kiva/KIVAMainViewController.h; sourceTree = "<group>"; };
 		F8B8BD4F194E3EC300E2B5C2 /* KIVAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAMainViewController.m; path = Kiva/KIVAMainViewController.m; sourceTree = "<group>"; };
+		F8B8BD51194E4C2600E2B5C2 /* KIVAWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAWebViewController.h; path = Kiva/KIVAWebViewController.h; sourceTree = "<group>"; };
+		F8B8BD52194E4C2600E2B5C2 /* KIVAWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAWebViewController.m; path = Kiva/KIVAWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 				F8B8BD4F194E3EC300E2B5C2 /* KIVAMainViewController.m */,
 				F8B8BD4B194E2D4500E2B5C2 /* KIVACarrouselViewController.h */,
 				F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */,
+				F8B8BD51194E4C2600E2B5C2 /* KIVAWebViewController.h */,
+				F8B8BD52194E4C2600E2B5C2 /* KIVAWebViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 				F8B8BD39194D1E6200E2B5C2 /* KIVAAPIClient.m in Sources */,
 				F8B8BCFD194CCBA900E2B5C2 /* KIVAAppDelegate.m in Sources */,
 				F8B8BD35194D111500E2B5C2 /* KIVAJSONImporter.m in Sources */,
+				F8B8BD53194E4C2600E2B5C2 /* KIVAWebViewController.m in Sources */,
 				F8B8BD4A194DFFB600E2B5C2 /* KIVACoreDataManager.m in Sources */,
 				F8B8BD3C194D1F3400E2B5C2 /* KIVAWSAPIClient.m in Sources */,
 				F8B8BD44194D598500E2B5C2 /* KIVABaseMultSelectCell.m in Sources */,

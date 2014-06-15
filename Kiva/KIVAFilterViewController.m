@@ -7,26 +7,23 @@
 //
 
 #import "KIVAFilterViewController.h"
+#import "KIVACarrouselViewController.h"
+#import "KIVADataManager.h"
 
 @interface KIVAFilterViewController ()
-
+@property (weak, nonatomic) IBOutlet UICollectionView   *collectionView;
+@property (weak, nonatomic) KIVACarrouselViewController *carrouselViewController;
 @end
 
 @implementation KIVAFilterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.carrouselViewController = self.childViewControllers.firstObject;
+    self.carrouselViewController.carrouselTitle = @"Filter Results";
+    self.carrouselViewController.loans = [KIVADataManager sharedManager].allLoans;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,5 +37,34 @@
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:NULL];
 }
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    KIVALoanCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"KIVALoanCellID" forIndexPath:indexPath];
+//    NSAssert(cell, @"No cell");
+//    
+//    cell.loan = self.loans[indexPath.row];
+//    return cell;
+    return nil;
+}
+
+//#pragma mark - UICollectionViewDelegate
+//
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    KIVALoan *loan = self.loans[indexPath.row];
+//    NSString *path = [@"http://www.kiva.org/lend/" stringByAppendingPathComponent:@(loan.loanID).stringValue];
+//    KIVAWebViewController *webVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewControllerID"];
+//    [self presentViewController:webVC animated:YES
+//                     completion:NULL];
+//    webVC.url = [NSURL URLWithString:path];
+//}
 
 @end

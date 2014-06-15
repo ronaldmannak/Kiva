@@ -30,6 +30,8 @@
 		F8B8BD2F194D0AFF00E2B5C2 /* KIVADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD2E194D0AFF00E2B5C2 /* KIVADataManager.m */; };
 		F8B8BD31194D108E00E2B5C2 /* Loan.json in Resources */ = {isa = PBXBuildFile; fileRef = F8B8BD30194D108E00E2B5C2 /* Loan.json */; };
 		F8B8BD35194D111500E2B5C2 /* KIVAJSONImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD34194D111500E2B5C2 /* KIVAJSONImporter.m */; };
+		F8B8BD39194D1E6200E2B5C2 /* KIVAAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD38194D1E6200E2B5C2 /* KIVAAPIClient.m */; };
+		F8B8BD3C194D1F3400E2B5C2 /* KIVAWSAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD3B194D1F3400E2B5C2 /* KIVAWSAPIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		F8B8BD30194D108E00E2B5C2 /* Loan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loan.json; sourceTree = "<group>"; };
 		F8B8BD33194D111500E2B5C2 /* KIVAJSONImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAJSONImporter.h; path = Kiva/KIVAJSONImporter.h; sourceTree = "<group>"; };
 		F8B8BD34194D111500E2B5C2 /* KIVAJSONImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAJSONImporter.m; path = Kiva/KIVAJSONImporter.m; sourceTree = "<group>"; };
+		F8B8BD37194D1E6200E2B5C2 /* KIVAAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAAPIClient.h; path = Kiva/KIVAAPIClient.h; sourceTree = "<group>"; };
+		F8B8BD38194D1E6200E2B5C2 /* KIVAAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAAPIClient.m; path = Kiva/KIVAAPIClient.m; sourceTree = "<group>"; };
+		F8B8BD3A194D1F3400E2B5C2 /* KIVAWSAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAWSAPIClient.h; path = Kiva/KIVAWSAPIClient.h; sourceTree = "<group>"; };
+		F8B8BD3B194D1F3400E2B5C2 /* KIVAWSAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAWSAPIClient.m; path = Kiva/KIVAWSAPIClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 		F8B8BD24194CF8CB00E2B5C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8B8BD36194D1E3D00E2B5C2 /* Network */,
 				F8B8BD32194D10F200E2B5C2 /* Importers */,
 				F8B8BD26194CFD9E00E2B5C2 /* Core Data */,
 				F8B8BD25194CFD9A00E2B5C2 /* Mantle */,
@@ -220,6 +227,17 @@
 				F8B8BD34194D111500E2B5C2 /* KIVAJSONImporter.m */,
 			);
 			name = Importers;
+			sourceTree = "<group>";
+		};
+		F8B8BD36194D1E3D00E2B5C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8B8BD37194D1E6200E2B5C2 /* KIVAAPIClient.h */,
+				F8B8BD38194D1E6200E2B5C2 /* KIVAAPIClient.m */,
+				F8B8BD3A194D1F3400E2B5C2 /* KIVAWSAPIClient.h */,
+				F8B8BD3B194D1F3400E2B5C2 /* KIVAWSAPIClient.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,8 +376,10 @@
 				F8B8BCF9194CCBA900E2B5C2 /* main.m in Sources */,
 				F8B8BD29194CFE3600E2B5C2 /* KIVABaseModel.m in Sources */,
 				F8B8BD2C194CFECB00E2B5C2 /* KIVALoan.m in Sources */,
+				F8B8BD39194D1E6200E2B5C2 /* KIVAAPIClient.m in Sources */,
 				F8B8BCFD194CCBA900E2B5C2 /* KIVAAppDelegate.m in Sources */,
 				F8B8BD35194D111500E2B5C2 /* KIVAJSONImporter.m in Sources */,
+				F8B8BD3C194D1F3400E2B5C2 /* KIVAWSAPIClient.m in Sources */,
 				F8B8BD2F194D0AFF00E2B5C2 /* KIVADataManager.m in Sources */,
 				F8B8BD00194CCBA900E2B5C2 /* Kiva.xcdatamodeld in Sources */,
 				F8B8BD23194CEFEF00E2B5C2 /* KIVALoginViewController.m in Sources */,

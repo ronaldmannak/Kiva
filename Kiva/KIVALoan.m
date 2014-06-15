@@ -18,7 +18,7 @@
 //             @"postedDate"      : @"posted_date",
              
              @"name"            : @"name",
-//             @"description"     : @"description",
+//             @"loanDescription"     : @"description",
              @"activity"        : @"activity",
              @"use"             : @"use",
              @"sector"          : @"sector",
@@ -31,7 +31,7 @@
              @"fundedAmount"    : @"website",
              @"loanAmount"      : @"is_admin",
              @"partnerID"       : @"remaining_down_votes",
-//             @"loanStatus"      : @"phone_verified",
+             @"loanStatus"      : @"phone_verified",
              @"borrowerCount"   : @"school_id",
              };
 };
@@ -54,6 +54,26 @@
 {
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
+
+/*
++ (NSValueTransformer *)loanStatusJSONTransformer
+{
+    NSDictionary *states = @{
+                             @"fundraising"     : @(KIVALoanStatusFundraising),
+                             @"funded"          : @(KIVALoanStatusFunded),
+                             @"in_repayment"    : @(KIVALoanStatusInRepayment),
+                             @"paid"            : @(KIVALoanStatusPaid),
+                             @"defaulted"       : @(KIVALoanStatusDefaulted),
+                             @"refunded"        : @(KIVALoanStatusRefunded),
+                             };
+    
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+        return states[str];
+    } reverseBlock:^(NSNumber *state) {
+        return [states allKeysForObject:state].lastObject;
+    }];
+}
+ */
 
 + (void)importLoansFromDisk
 {

@@ -12,14 +12,14 @@
 //  Loan model documentation: http://build.kiva.org/docs/data/loans
 //  Use [MTLJSONAdapter modelOfClass:KIVALoan.class fromJSONDictionary:responseObject error:&error]; to create a new loan instance
 
-typedef NS_ENUM(NSInteger, KIVALoanStatus) {
-    KIVALoanStatusFundraising,
-    KIVALoanStatusFunded,
-    KIVALoanStatusInRepayment,
-    KIVALoanStatusPaid,
-    KIVALoanStatusDefaulted,
-    KIVALoanStatusRefunded,
-};
+//typedef NS_ENUM(NSInteger, KIVALoanStatus) {
+//    KIVALoanStatusFundraising,
+//    KIVALoanStatusFunded,
+//    KIVALoanStatusInRepayment,
+//    KIVALoanStatusPaid,
+//    KIVALoanStatusDefaulted,
+//    KIVALoanStatusRefunded,
+//};
 
 @interface KIVALoan : KIVABaseModel
 
@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, KIVALoanStatus) {
 //
 //// Details
 @property (nonatomic, readonly) NSString        *name;
-//@property (nonatomic, readonly) NSString        *description;
+//@property (nonatomic, readonly) NSString        *loanDescription;
 @property (nonatomic, readonly) NSString        *activity;      // enum?
 @property (nonatomic, readonly) NSString        *use;
 @property (nonatomic, readonly) NSString        *sector;
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, KIVALoanStatus) {
 @property (nonatomic, readonly) double          fundedAmount;
 @property (nonatomic, readonly) double          loanAmount;
 @property (nonatomic, readonly) NSInteger       partnerID;
-//@property (nonatomic, readonly) KIVALoanStatus  loanStatus;
+@property (nonatomic, readonly) NSString        *loanStatus;
 @property (nonatomic, readonly) NSInteger       borrowerCount;
 
 

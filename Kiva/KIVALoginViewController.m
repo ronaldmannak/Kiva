@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet FBProfilePictureView   *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel                *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel                *statusLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -44,9 +45,11 @@
 {
     // temp
     [KIVALoan importLoansFromDisk];
+    [self performSegueWithIdentifier:@"MainSegueID" sender:sender];
     return;
     
 //    sender.enabled = NO;
+    [self.activityIndicator startAnimating];
     [[KIVAWSAPIClient sharedClient] openSession:^(BOOL success) {
 
         [[KIVADataManager sharedManager] allLoanSuccess:^(NSArray *loans) {
@@ -55,12 +58,9 @@
                 // If server is down, use stored items from disk
                 NSLog(@"Cannot load from server. Fall back to disk");
                 [KIVALoan importLoansFromDisk];
+                [self.activityIndicator stopAnimating];
             }
         }];
-//        [[KIVADataManager sharedManager] loansOfType:KIVALoanTypeExpiring success:^(NSArray *loans) {
-//            ;
-//        }];
-        
     }];
 }
 

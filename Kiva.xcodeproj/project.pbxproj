@@ -36,6 +36,7 @@
 		F8B8BD44194D598500E2B5C2 /* KIVABaseMultSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD43194D598500E2B5C2 /* KIVABaseMultSelectCell.m */; };
 		F8B8BD47194DFCD000E2B5C2 /* KIVALoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD46194DFCD000E2B5C2 /* KIVALoanCell.m */; };
 		F8B8BD4A194DFFB600E2B5C2 /* KIVACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD49194DFFB600E2B5C2 /* KIVACoreDataManager.m */; };
+		F8B8BD4D194E2D4500E2B5C2 /* KIVACarrouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		F8B8BD46194DFCD000E2B5C2 /* KIVALoanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVALoanCell.m; path = Kiva/KIVALoanCell.m; sourceTree = "<group>"; };
 		F8B8BD48194DFFB600E2B5C2 /* KIVACoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVACoreDataManager.h; path = Kiva/KIVACoreDataManager.h; sourceTree = "<group>"; };
 		F8B8BD49194DFFB600E2B5C2 /* KIVACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVACoreDataManager.m; path = Kiva/KIVACoreDataManager.m; sourceTree = "<group>"; };
+		F8B8BD4B194E2D4500E2B5C2 /* KIVACarrouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVACarrouselViewController.h; path = Kiva/KIVACarrouselViewController.h; sourceTree = "<group>"; };
+		F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVACarrouselViewController.m; path = Kiva/KIVACarrouselViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +267,8 @@
 				F8B8BD43194D598500E2B5C2 /* KIVABaseMultSelectCell.m */,
 				F8B8BD45194DFCD000E2B5C2 /* KIVALoanCell.h */,
 				F8B8BD46194DFCD000E2B5C2 /* KIVALoanCell.m */,
+				F8B8BD4B194E2D4500E2B5C2 /* KIVACarrouselViewController.h */,
+				F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				F8B8BD44194D598500E2B5C2 /* KIVABaseMultSelectCell.m in Sources */,
 				F8B8BD2F194D0AFF00E2B5C2 /* KIVADataManager.m in Sources */,
 				F8B8BD00194CCBA900E2B5C2 /* Kiva.xcdatamodeld in Sources */,
+				F8B8BD4D194E2D4500E2B5C2 /* KIVACarrouselViewController.m in Sources */,
 				F8B8BD23194CEFEF00E2B5C2 /* KIVALoginViewController.m in Sources */,
 				F8B8BD41194D488E00E2B5C2 /* KIVAFilterViewController.m in Sources */,
 			);

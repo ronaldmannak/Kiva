@@ -37,6 +37,7 @@
 		F8B8BD47194DFCD000E2B5C2 /* KIVALoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD46194DFCD000E2B5C2 /* KIVALoanCell.m */; };
 		F8B8BD4A194DFFB600E2B5C2 /* KIVACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD49194DFFB600E2B5C2 /* KIVACoreDataManager.m */; };
 		F8B8BD4D194E2D4500E2B5C2 /* KIVACarrouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */; };
+		F8B8BD50194E3EC300E2B5C2 /* KIVAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B8BD4F194E3EC300E2B5C2 /* KIVAMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		F8B8BD49194DFFB600E2B5C2 /* KIVACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVACoreDataManager.m; path = Kiva/KIVACoreDataManager.m; sourceTree = "<group>"; };
 		F8B8BD4B194E2D4500E2B5C2 /* KIVACarrouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVACarrouselViewController.h; path = Kiva/KIVACarrouselViewController.h; sourceTree = "<group>"; };
 		F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVACarrouselViewController.m; path = Kiva/KIVACarrouselViewController.m; sourceTree = "<group>"; };
+		F8B8BD4E194E3EC300E2B5C2 /* KIVAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KIVAMainViewController.h; path = Kiva/KIVAMainViewController.h; sourceTree = "<group>"; };
+		F8B8BD4F194E3EC300E2B5C2 /* KIVAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KIVAMainViewController.m; path = Kiva/KIVAMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,8 @@
 				F8B8BD43194D598500E2B5C2 /* KIVABaseMultSelectCell.m */,
 				F8B8BD45194DFCD000E2B5C2 /* KIVALoanCell.h */,
 				F8B8BD46194DFCD000E2B5C2 /* KIVALoanCell.m */,
+				F8B8BD4E194E3EC300E2B5C2 /* KIVAMainViewController.h */,
+				F8B8BD4F194E3EC300E2B5C2 /* KIVAMainViewController.m */,
 				F8B8BD4B194E2D4500E2B5C2 /* KIVACarrouselViewController.h */,
 				F8B8BD4C194E2D4500E2B5C2 /* KIVACarrouselViewController.m */,
 			);
@@ -416,6 +421,7 @@
 			files = (
 				F8B8BCF9194CCBA900E2B5C2 /* main.m in Sources */,
 				F8B8BD29194CFE3600E2B5C2 /* KIVABaseModel.m in Sources */,
+				F8B8BD50194E3EC300E2B5C2 /* KIVAMainViewController.m in Sources */,
 				F8B8BD2C194CFECB00E2B5C2 /* KIVALoan.m in Sources */,
 				F8B8BD47194DFCD000E2B5C2 /* KIVALoanCell.m in Sources */,
 				F8B8BD39194D1E6200E2B5C2 /* KIVAAPIClient.m in Sources */,

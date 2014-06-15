@@ -53,6 +53,7 @@
                 KIVALoan *loan = [MTLJSONAdapter modelOfClass:KIVALoan.class
                                            fromJSONDictionary:JSONLoan
                                                         error:&error];
+//                NSLog(@"loan: %@", loan);
                 if (error) {
                     NSLog(@"Error: %@", error);
                 } else {
@@ -60,7 +61,7 @@
                     [allLoans addObject:loan];
                 }
             }
-            NSString *name = ((NSArray *)JSONDict[@"name"]).firstObject;            
+            NSString *name = ((NSArray *)JSONDict[@"name"]).firstObject;
             if ([name isEqualToString:@"geography"]) {
                 self.geographyLoans = namedLoans.copy;
             } else if ([name isEqualToString:@"expiring"]) {
@@ -68,6 +69,9 @@
             }
         }
         self.allLoans = allLoans.copy;
+        if (success) {
+            success(self.allLoans);
+        }
     }];
 }
 

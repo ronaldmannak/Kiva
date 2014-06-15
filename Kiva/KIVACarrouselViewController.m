@@ -20,13 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.label.text = self.carrouselTitle;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setCarrouselTitle:(NSString *)carrouselTitle
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _carrouselTitle = self.label.text = carrouselTitle;
 }
 
 @end

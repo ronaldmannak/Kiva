@@ -16,27 +16,31 @@
 
 @property (nonatomic, readonly) NSUInteger      loanID;
 @property (nonatomic, readonly) NSDate          *postedDate;
-//
-//// Details
+
+// Details
 @property (nonatomic, readonly) NSString        *name;
 @property (nonatomic, readonly) NSString        *loanDescription;
 @property (nonatomic, readonly) NSString        *longDescription;
 @property (nonatomic, readonly) NSString        *activity;     
 @property (nonatomic, readonly) NSString        *use;
 @property (nonatomic, readonly) NSString        *sector;
-@property (nonatomic, readonly) NSURL           *imageURL;
-//
-//// Location
+@property (nonatomic, readonly) NSInteger       imageID;
+@property (nonatomic, readonly) NSURL           *largeImageURL;
+@property (nonatomic, readonly) NSURL           *smallImageURL;
+@property (nonatomic, readonly) NSURL           *flagURL;
+
+// Location
 @property (nonatomic, readonly) NSString        *country;
 @property (nonatomic, readonly) NSString        *countryCode;
 @property (nonatomic, readonly) NSString        *town;
 @property (nonatomic, readonly) CLLocation      *coordinate;
-//
-//// Status
+
+// Status
 @property (nonatomic, readonly) double          fundedAmount;
 @property (nonatomic, readonly) double          loanAmount;
 @property (nonatomic, readonly) double          fundedPercentage;
 @property (nonatomic, readonly) NSInteger       partnerID;
+@property (nonatomic, readonly) double          partnerRating;
 @property (nonatomic, readonly) NSString        *loanStatus;
 @property (nonatomic, readonly) NSInteger       borrowerCount;
 

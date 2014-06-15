@@ -1180,10 +1180,10 @@
             </objects>
             <point key="canvasLocation" x="62" y="-1659"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="FFo-Zd-XIM">
             <objects>
-                <viewController id="egy-Si-XAe" sceneMemberID="viewController">
+                <viewController id="egy-Si-XAe" customClass="KIVAMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oaC-Oa-UwX"/>
                         <viewControllerLayoutGuide type="bottom" id="qf4-np-OGy"/>
@@ -1200,12 +1200,20 @@
                                     <segue destination="7Kq-9z-YZm" kind="embed" id="vB0-J8-F1X"/>
                                 </connections>
                             </containerView>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-a4-pD1">
+                                <rect key="frame" x="0.0" y="312" width="768" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="7Kq-9z-YZm" kind="embed" id="few-kt-oxt"/>
+                                </connections>
+                            </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KivaME_LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="yFt-1U-euw">
                                 <rect key="frame" x="264" y="20" width="240" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-0G-N0d">
-                                <rect key="frame" x="20" y="32" width="46" height="30"/>
+                                <rect key="frame" x="20" y="43" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Filter">
                                     <color key="titleColor" red="0.12549020349979401" green="0.60000002384185791" blue="0.023529414087533951" alpha="1" colorSpace="deviceRGB"/>
@@ -1235,12 +1243,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="216"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNh-qt-0h5">
-                                <rect key="frame" x="20" y="0.0" width="302" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rK6-9r-prk">
                                 <rect key="frame" x="0.0" y="41" width="768" height="175"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1321,18 +1323,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U66-7p-XBB">
+                                <rect key="frame" x="20" y="12" width="315" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="collectionView" destination="rK6-9r-prk" id="lts-yq-luo"/>
-                        <outlet property="label" destination="nNh-qt-0h5" id="18Z-zt-mtz"/>
+                        <outlet property="label" destination="U66-7p-XBB" id="GTH-Kt-eF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMh-8e-Drw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="-751"/>
+            <point key="canvasLocation" x="1043" y="-470"/>
         </scene>
     </scenes>
     <resources>
@@ -1344,4 +1351,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="vB0-J8-F1X"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,4 +10,7 @@
 
 @interface KIVACarrouselViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *loans;
+@property (nonatomic, strong) NSString *carrouselTitle;
+
 @end

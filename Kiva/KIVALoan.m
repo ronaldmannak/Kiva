@@ -18,12 +18,15 @@
              @"postedDate"      : @"posted_date",
              
              @"name"            : @"borrower_name",
-             @"loanDescription" : @"loan_description",
+             @"loanDescription" : @"short_description",
              @"longDescription" : @"long_description",
              @"activity"        : @"activity",
              @"use"             : @"use",
              @"sector"          : @"sector",
-             @"imageURL"        : @"image",
+             @"imageID"         : @"image_id",
+             @"largeImageURL"   : @"large_image_url",
+             @"smallImageURL"   : @"short_image_url",
+             @"flagURL"         : @"flag_url",
 
              @"country"         : @"country",
              @"countryCode"     : @"country_code",
@@ -34,6 +37,7 @@
              @"loanAmount"      : @"loan_amount",
              @"fundedPercentage": @"funded_percentage",
              @"partnerID"       : @"partner_id",
+             @"partnerRating"   : @"partner_rating",
              @"loanStatus"      : @"status",
              @"borrowerCount"   : @"borrower_count",
              };
@@ -68,7 +72,7 @@
              @"postedDate"      : @"postedDate",
              
              @"name"            : @"name",
-             @"loanDescription"     : @"loanDescription",
+             @"loanDescription" : @"loanDescription",
              @"activity"        : @"activity",
              @"use"             : @"use",
              @"sector"          : @"sector",

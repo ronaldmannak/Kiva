@@ -42,17 +42,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    KIVALoanCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"KIVALoanCellID" forIndexPath:indexPath];
-//    NSAssert(cell, @"No cell");
-//    
-//    cell.loan = self.loans[indexPath.row];
-//    return cell;
-    return nil;
+    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"RegionsID" forIndexPath:indexPath];
+    NSAssert(cell, @"No cell");
+    return cell;
 }
 
 //#pragma mark - UICollectionViewDelegate

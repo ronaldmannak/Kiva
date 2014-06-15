@@ -8,6 +8,7 @@
 
 #import "KIVAWSAPIClient.h"
 #import "KIVAAPIClient.h"
+#import <Facebook.h>
 
 //NSString *const kKivaWSAPIBaseURLString = @"https://api.kivaws.org";
 NSString *const kKivaWSAPIBaseURLString = @"http://ec2-54-187-253-179.us-west-2.compute.amazonaws.com:8000";
@@ -117,7 +118,7 @@ NSString *const kKivaWSAPIBaseURLString = @"http://ec2-54-187-253-179.us-west-2.
         [[KIVAAPIClient sharedClient] requestoAuthTokenSuccess:^(NSString *verificationCode) {
             
             // 3. Login to AWS
-            [self openSessionWithOAuthToken:oAuthToken
+            [self openSessionWithOAuthToken:[FBSession activeSession].accessTokenData.accessToken
                                 oAuthSecret:oAuthSecret
                                    verifier:verificationCode
                                     success:^(NSURLSessionDataTask *task, id responseObject) {

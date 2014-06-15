@@ -23,6 +23,8 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb326104160871341</string>
@@ -34,7 +36,7 @@
 	<key>FacebookAppID</key>
 	<string>326104160871341</string>
 	<key>FacebookDisplayName</key>
-	<string>Kiva</string>
+	<string>KivaMe</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile~ipad</key>

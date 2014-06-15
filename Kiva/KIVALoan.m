@@ -24,15 +24,15 @@
              @"sector"          : @"sector",
 //             @"imageURL"        : @"image",
              
-//             @"country"         : @"posts_count",
-//             @"town"            : @"next_anonymous_post_in",
-//             @"coordinate"      : @"description",
+//             @"country"         : @"country",
+//             @"town"            : @"town",
+//             @"coordinate"      : @"coordinate",
 
-             @"fundedAmount"    : @"website",
-             @"loanAmount"      : @"is_admin",
-             @"partnerID"       : @"remaining_down_votes",
-             @"loanStatus"      : @"phone_verified",
-             @"borrowerCount"   : @"school_id",
+             @"fundedAmount"    : @"funded_amount",
+             @"loanAmount"      : @"loan_amount",
+             @"partnerID"       : @"partner_id",
+             @"loanStatus"      : @"status",
+             @"borrowerCount"   : @"borrower_count",
              };
 };
 
@@ -74,6 +74,51 @@
     }];
 }
  */
+
+#pragma mark - Core Data
+// See MTLManagedObjectAdapter.h
+
++ (NSDictionary *)managedObjectKeysByPropertyKey
+{
+    return @{
+             @"loanID"          : @"loanID",
+//             @"postedDate"      : @"postedDate",
+             
+             @"name"            : @"name",
+//             @"loanDescription"     : @"loanDescription",
+             @"activity"        : @"activity",
+             @"use"             : @"use",
+             @"sector"          : @"sector",
+//             @"imageURL"        : @"imageURL",
+
+//             @"country"         : @"country",
+//             @"town"            : @"town",
+//             @"coordinate"      : @"coordinate",
+             
+             @"fundedAmount"    : @"website",
+             @"loanAmount"      : @"is_admin",
+             @"partnerID"       : @"remaining_down_votes",
+             @"loanStatus"      : @"phone_verified",
+             @"borrowerCount"   : @"school_id",
+             };
+}
+
++ (NSString *)managedObjectEntityName
+{
+    return @"Loan";
+}
+
++ (NSSet *)propertyKeysForManagedObjectUniquing
+{
+    return [NSSet setWithObject:@"loanID"];
+}
+
+//+ (NSDictionary *)relationshipModelClassesByPropertyKey
+//{
+//    return @{@"partnerID"     : @"KIVAPartner"}; //[KIVAPartner class]?
+//}
+
+#pragma mark - Database import
 
 + (void)importLoansFromDisk
 {

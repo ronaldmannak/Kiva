@@ -36,7 +36,7 @@
                                       ];
     self.loginView.delegate = self;
     
-//    [KIVALoan importLoansFromDisk];
+    [KIVALoan importLoansFromDisk];
     
     // Do any additional setup after loading the view.
 }

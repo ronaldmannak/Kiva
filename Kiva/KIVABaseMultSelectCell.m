@@ -1,5 +1,5 @@
 //
-//  KIVABaseMultSelectCell.m
+//  KIVABaseMultiSelectCell.m
 //  Kiva
 //
 //  Created by Ronald Mannak on 6/14/14.
@@ -10,14 +10,14 @@
 
 static const NSInteger kFirstButtonTag = 1000;
 
-@interface KIVABaseMultSelectCell ()
+@interface KIVABaseMultiSelectCell ()
 
 @property (nonatomic, strong) NSMutableSet *selectedIndexes;
 @property (nonatomic, readonly) BOOL  isAllSelected;
 
 @end
 
-@implementation KIVABaseMultSelectCell
+@implementation KIVABaseMultiSelectCell
 
 - (void)selectAllButtons
 {
@@ -31,8 +31,10 @@ static const NSInteger kFirstButtonTag = 1000;
 
 - (void)restorePreviouslySelectedButtons
 {
-    for (NSNumber *index in self.selectedIndexes) {
-        ;
+    NSInteger tag = kFirstButtonTag;
+    while ([self viewWithTag:tag]) {
+        UIButton *button = (UIButton *)[self viewWithTag:tag];
+        button.selected = [self.selectedIndexes containsObject:@(tag)];
     }
 }
 
@@ -68,12 +70,15 @@ static const NSInteger kFirstButtonTag = 1000;
 
 - (NSSet *)selectedButtons
 {
-    if (self.isAllSelected) {
-//        return all;
-    } else {
-        // create set from self.selectedIndexes
+    NSMutableSet *selectedButtons = [NSMutableSet new];
+    NSInteger tag = kFirstButtonTag + (self.firstButtonIsAll? 1 : 0); // don't include All button
+    while ([self viewWithTag:tag]) {
+        UIButton *button = (UIButton *)[self viewWithTag:tag];
+        if (button.isSelected) {
+            [selectedButtons addObject:button.titleLabel.text];
+        }
     }
-    return nil;
+    return selectedButtons.count? selectedButtons : nil;
 }
 
 @end

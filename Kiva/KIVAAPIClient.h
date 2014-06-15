@@ -8,6 +8,14 @@
 
 #import "AFHTTPSessionManager.h"
 
+/*
+ Authentication flow:
+ 1. Login Facebook
+ 1. Call Amazon URL with FB token (URL in HipChat), receive oAuth token and secret
+ 2. Use token from Amazon to login to Kiva, returns verification code ( http://build.kiva.org/docs/conventions/oauth )
+ 3. POST verification code, oauth_token from the first response, oauth_token_secret from the first response to Amazon URL link in Google doc. 
+ */
+
 @interface KIVAAPIClient : AFHTTPSessionManager
 
 @end

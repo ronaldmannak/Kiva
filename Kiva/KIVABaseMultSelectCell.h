@@ -1,5 +1,5 @@
 //
-//  KIVABaseMultSelectCell.h
+//  KIVABaseMultiSelectCell.h
 //  Kiva
 //
 //  Created by Ronald Mannak on 6/14/14.
@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KIVABaseMultSelectCell : UICollectionViewCell
+@class KIVABaseMultiSelectCell;
+@protocol KIVAMultiselectCellDelegate <NSObject>
+- (void)multiSelectCell:(KIVABaseMultiSelectCell *)cell
+        didSelectButton:(UIButton *)button;
+@end
+
+@interface KIVABaseMultiSelectCell : UICollectionViewCell
 
 /**
  *  YES if the first button in the cell is All or Any.

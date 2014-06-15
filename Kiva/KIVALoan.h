@@ -15,7 +15,7 @@
 @interface KIVALoan : KIVABaseModel
 
 @property (nonatomic, readonly) NSUInteger      loanID;
-//@property (nonatomic, readonly) NSDate          *postedDate;
+@property (nonatomic, readonly) NSDate          *postedDate;
 //
 //// Details
 @property (nonatomic, readonly) NSString        *name;

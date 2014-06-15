@@ -24,7 +24,7 @@
              @"use"             : @"use",
              @"sector"          : @"sector",
              @"imageURL"        : @"image",
-             
+
              @"country"         : @"country",
              @"countryCode"     : @"country_code",
              @"town"            : @"town",
@@ -65,18 +65,18 @@
 {
     return @{
              @"loanID"          : @"loanID",
-//             @"postedDate"      : @"postedDate",
+             @"postedDate"      : @"postedDate",
              
              @"name"            : @"name",
-//             @"loanDescription"     : @"loanDescription",
+             @"loanDescription"     : @"loanDescription",
              @"activity"        : @"activity",
              @"use"             : @"use",
              @"sector"          : @"sector",
-//             @"imageURL"        : @"imageURL",
+             @"imageURL"        : @"imageURL",
 
-//             @"country"         : @"country",
-//             @"town"            : @"town",
-//             @"coordinate"      : @"coordinate",
+             @"country"         : @"country",
+             @"town"            : @"town",
+             @"coordinate"      : @"coordinate",
              
              @"fundedAmount"    : @"website",
              @"loanAmount"      : @"is_admin",
@@ -117,7 +117,7 @@
             NSLog(@"Error: %@", error);
         } else {
             [loanArray addObject:loan];
-//            NSLog(@"Success: %@", loan);
+            NSLog(@"Success: %@", loan);
         }
     }
     return [loanArray copy];

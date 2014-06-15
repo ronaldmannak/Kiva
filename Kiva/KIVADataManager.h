@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, KIVALoanType) {
+    KIVALoanTypeGeography,
+    KIVALoanTypeExpiring,
+};
+
 @interface KIVADataManager : NSObject
 
++ (instancetype)sharedManager;
+
+- (void)loansOfType:(KIVALoanType)type
+            success:(void (^)(NSArray *loans))success;
+- (void)allLoanSuccess:(void (^)(NSArray *loans))success;
 @end

@@ -10,4 +10,10 @@
 
 @implementation KIVABaseModel
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
+}
+
 @end

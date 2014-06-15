@@ -18,4 +18,8 @@
 
 @interface KIVAAPIClient : AFHTTPSessionManager
 
++ (instancetype)sharedClient;
+
+- (void)requestoAuthTokenSuccess:(void (^)(NSString *verificationCode))success
+                         failure:(void (^)(NSURLSessionDataTask *, NSError *))failure;
 @end

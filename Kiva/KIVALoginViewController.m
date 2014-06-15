@@ -8,6 +8,8 @@
 
 #import "KIVALoginViewController.h"
 #import <FacebookSDK.h>
+#import "KIVAWSAPIClient.h"
+#import "KIVADataManager.h"
 
 // temp
 #import "KIVALoan.h"
@@ -39,6 +41,20 @@
     [KIVALoan importLoansFromDisk];
     
     // Do any additional setup after loading the view.
+}
+- (IBAction)kivaLogin:(UIButton *)sender
+{
+//    sender.enabled = NO;
+    [[KIVAWSAPIClient sharedClient] openSession:^(BOOL success) {
+
+        [[KIVADataManager sharedManager] allLoanSuccess:^(NSArray *loans) {
+            NSLog(@"loans: %@", loans);
+        }];
+//        [[KIVADataManager sharedManager] loansOfType:KIVALoanTypeExpiring success:^(NSArray *loans) {
+//            ;
+//        }];
+        
+    }];
 }
 
 #pragma mark - FBLoginViewDelegate

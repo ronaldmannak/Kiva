@@ -10,4 +10,13 @@
 
 @interface KIVAWSAPIClient : AFHTTPSessionManager
 
++ (instancetype)sharedClient;
+
+- (void)openSession:(void (^)(BOOL success))success;
+
+- (void)loansOfType:(NSString *)typeString
+            success:(void (^)(NSArray *loans))success;
+
+- (void)allLoans:(void (^)(NSDictionary *loans))success;
+
 @end

@@ -12,9 +12,6 @@
 
 @interface KIVADataManager ()
 
-@property (nonatomic, strong) NSArray   *geographyLoans;
-@property (nonatomic, strong) NSArray   *expiringLoans;
-
 @end
 
 @implementation KIVADataManager
@@ -48,6 +45,11 @@
     [[KIVAWSAPIClient sharedClient] allLoans:^(NSDictionary *loans) {
         NSLog(@"loans: %@", loans);
     }];
+}
+
+- (void)loansFromDisk
+{
+    self.geographyLoans = self.expiringLoans = self.allLoans = [KIVALoan importLoansFromDisk];
 }
 
 @end

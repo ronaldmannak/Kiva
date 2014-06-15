@@ -38,17 +38,23 @@
                                       ];
     self.loginView.delegate = self;
     
-    [KIVALoan importLoansFromDisk];
-    
     // Do any additional setup after loading the view.
 }
 - (IBAction)kivaLogin:(UIButton *)sender
 {
+    // temp
+    [KIVALoan importLoansFromDisk];
+    return;
+    
 //    sender.enabled = NO;
     [[KIVAWSAPIClient sharedClient] openSession:^(BOOL success) {
 
         [[KIVADataManager sharedManager] allLoanSuccess:^(NSArray *loans) {
             NSLog(@"loans: %@", loans);
+            if (!loans) {
+                // If server is down, use stored items from disk
+                [KIVALoan importLoansFromDisk];
+            }
         }];
 //        [[KIVADataManager sharedManager] loansOfType:KIVALoanTypeExpiring success:^(NSArray *loans) {
 //            ;

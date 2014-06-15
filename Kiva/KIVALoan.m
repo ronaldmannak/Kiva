@@ -15,21 +15,24 @@
 {
     return @{
              @"loanID"          : @"id",
-//             @"postedDate"      : @"posted_date",
+             @"postedDate"      : @"posted_date",
              
-             @"name"            : @"name",
-//             @"loanDescription"     : @"description",
+             @"name"            : @"borrower_name",
+             @"loanDescription" : @"loan_description",
+             @"longDescription" : @"long_description",
              @"activity"        : @"activity",
              @"use"             : @"use",
              @"sector"          : @"sector",
-//             @"imageURL"        : @"image",
+             @"imageURL"        : @"image",
              
-//             @"country"         : @"country",
-//             @"town"            : @"town",
-//             @"coordinate"      : @"coordinate",
+             @"country"         : @"country",
+             @"countryCode"     : @"country_code",
+             @"town"            : @"town",
+             @"coordinate"      : @"coordinate",
 
              @"fundedAmount"    : @"funded_amount",
              @"loanAmount"      : @"loan_amount",
+             @"fundedPercentage": @"funded_percentage",
              @"partnerID"       : @"partner_id",
              @"loanStatus"      : @"status",
              @"borrowerCount"   : @"borrower_count",
@@ -54,26 +57,6 @@
 {
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
-
-/*
-+ (NSValueTransformer *)loanStatusJSONTransformer
-{
-    NSDictionary *states = @{
-                             @"fundraising"     : @(KIVALoanStatusFundraising),
-                             @"funded"          : @(KIVALoanStatusFunded),
-                             @"in_repayment"    : @(KIVALoanStatusInRepayment),
-                             @"paid"            : @(KIVALoanStatusPaid),
-                             @"defaulted"       : @(KIVALoanStatusDefaulted),
-                             @"refunded"        : @(KIVALoanStatusRefunded),
-                             };
-    
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
-        return states[str];
-    } reverseBlock:^(NSNumber *state) {
-        return [states allKeysForObject:state].lastObject;
-    }];
-}
- */
 
 #pragma mark - Core Data
 // See MTLManagedObjectAdapter.h
@@ -120,10 +103,11 @@
 
 #pragma mark - Database import
 
-+ (void)importLoansFromDisk
++ (NSArray *)importLoansFromDisk
 {
     KIVAJSONImporter *importer = [KIVAJSONImporter new];
-    NSDictionary *loans = [importer JSONDictionaryFromFileOfEntity:@"Loan" key:@"loans"];
+    NSDictionary *loans = [importer JSONDictionaryFromFileOfEntity:@"Loan" key:nil];
+    NSMutableArray *loanArray = [NSMutableArray new];
     for (NSDictionary *loanJSON in loans) {
         NSError *error = nil;
         KIVALoan *loan = [MTLJSONAdapter modelOfClass:KIVALoan.class
@@ -132,8 +116,10 @@
         if (error) {
             NSLog(@"Error: %@", error);
         } else {
-            NSLog(@"Success: %@", loan);
+            [loanArray addObject:loan];
+//            NSLog(@"Success: %@", loan);
         }
     }
+    return [loanArray copy];
 }
 @end
